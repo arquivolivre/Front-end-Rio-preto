@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Encontro de front-end!</title>
+</head>
+<body data-ng-controller="mainCtrl">
+
+	<div data-ng-repeat="item in obj">
+		{{item}}
+	</div>
+	
+	{{valor | currency}}
+
+	<button data-ng-click="fazAlgumaCoisa()">Botão</button>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+
+	<script type="text/javascript">
+		var app = angular.module('app',[]);
+		app.controller('mainCtrl', ['$scope', function($scope){
+			$scope.obj = [1,2]
+			var count = 3;
+
+			$scope.valor = 2.35;
+
+			$scope.fazAlgumaCoisa = function() {
+				$scope.obj.push(count);
+				console.log(count);
+				count++;
+			}
+		}]);
+	</script>
+</body>
+</html>
