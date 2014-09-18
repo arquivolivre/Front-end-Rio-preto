@@ -4,5 +4,5 @@ Repositório com o material do grupo de estudos de front-end Rio Preto.
 
 Participantes
 ==================
--Gustavo Teixeira Cagnin
--Thiago Gonzaga (O mais #GATO)
+*Gustavo Teixeira Cagnin
+*Thiago Gonzaga (O mais **GATO**)
