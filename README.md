@@ -9,3 +9,5 @@ Participantes
 2. Thiago Gonzaga (O mais **GATO**)
 
 3. Thunder (O `Barbudo`)
+
+4. Vinicius Fragalli (Sagat)
