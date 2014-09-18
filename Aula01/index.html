@@ -6,6 +6,14 @@
 </head>
 <body data-ng-controller="mainCtrl">
 
+	<!-- jQuery -->
+	<h1>
+		jQuery no angularJS
+	</h1>
+	<p class="mudar">
+		Texto utilizando css por jQuery.
+	</p>
+
 	<!-- Repetir elementos de um objeto ou array -->
 	<h1>
 		data-ng-repeat
@@ -59,11 +67,15 @@
 	<!-- Observem que aqui está com hífen e na controller é camelCase. Isso é do angularJS -->
 	<front-end></front-end>
 
+	<script type="text/javascript" src="jquery.min.js"></script>
 	<script type="text/javascript" src="angular.min.js"></script>
 
 	<script type="text/javascript">
 		var app = angular.module('app',[]);
 		app.controller('mainCtrl', ['$scope', function($scope){
+
+			// jQuery no angularJS.
+			angular.element('.mudar').css('color','#0000ff');
 
 			$scope.obj = [1,2]
 			var count = 3;
