@@ -1,7 +1,10 @@
 ==================================== ARQUIVOS A SEREM DISCUTIDOS ==================================== 
 
 
-Coloque aqui um assunto que vc gostaria de falar/ouvir nos nossos encontros
+Coloque aqui um assunto que você gostaria de falar/ouvir nos nossos encontros.
 
 * JavaScript
 * Bootstrap
+* Design responsivo
+* Worflow de trabalho
+* Pré-processadores de CSS

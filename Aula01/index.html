@@ -6,29 +6,88 @@
 </head>
 <body data-ng-controller="mainCtrl">
 
+	<!-- Repetir elementos de um objeto ou array -->
+	<h1>
+		data-ng-repeat
+	</h1>
 	<div data-ng-repeat="item in obj">
 		{{item}}
 	</div>
-	
-	{{valor | uppercase}}
 
-	<button data-ng-click="fazAlgumaCoisa()">Botão</button>
+	<!-- Click -->
+	<h1>
+		data-ng-click
+	</h1>
+	<button data-ng-click="nomeDaFuncao()">
+		Botão
+	</button>
+
+	<!-- Filtro -->
+	<h1>
+		filter e data-ng-bind
+	</h1>
+	<p data-ng-bind="texto | uppercase"></p>
+
+	<!-- Show -->
+	<h1>
+		data-ng-show
+	</h1>
+	<p data-ng-show="condicaoMostra">
+		Mostra
+	</p>
+
+	<!-- Esconde -->
+	<!-- Não irá aparecer nada na view, pois o texto está oculto -->
+	<h1>
+		data-ng-hide
+	</h1>
+	<p data-ng-hide="condicaoEsconde">
+		Esconde
+	</p>
+
+	<!-- Two-way data bind -->
+	<h1>
+		data-ng-bind e interpolação
+	</h1>
+	<input type="text" data-ng-model="queLegal" />
+	{{queLegal}}
+
+	<!-- Custom directive -->
+	<h1>
+		Custom directive
+	</h1>
+	<!-- Observem que aqui está com hífen e na controller é camelCase. Isso é do angularJS -->
+	<front-end></front-end>
 
 	<script type="text/javascript" src="angular.min.js"></script>
 
 	<script type="text/javascript">
 		var app = angular.module('app',[]);
 		app.controller('mainCtrl', ['$scope', function($scope){
+
 			$scope.obj = [1,2]
 			var count = 3;
 
-			$scope.valor = 2.35;
+			$scope.texto = 'esse é um texto comum.';
 
-			$scope.fazAlgumaCoisa = function() {
+			$scope.nomeDaFuncao = function() {
 				$scope.obj.push(count);
-				console.log(count);
 				count++;
 			}
+
+			$scope.condicaoMostra = true;
+
+			$scope.condicaoEsconde = true;
+
+
+		}]);
+
+		app.directive('frontEnd', [function(){
+			return {
+				restrict: 'E',
+				template: '<p>Esse texto veio de um custom directive.</p>',
+				replace: true
+			};
 		}]);
 	</script>
 </body>
